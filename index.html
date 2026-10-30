@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" style="color-scheme: dark;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Separator or Blender? A Work-From-Home Couples Quiz</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fbf8f3;--fg:#222;--mut:#666;--card:#fff;--line:#e2dccf;--acc:#d9531e;--g:#2e9e5b;--a:#e0a020;--r:#d33f3f;--n:#888}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17171a;--fg:#eee;--mut:#aaa;--card:#222226;--line:#38383e;--acc:#ff7a45;--g:#4cc17f;--a:#f0b840;--r:#ff6b6b;--n:#999}}
+:root[data-theme="dark"]{--bg:#17171a;--fg:#eee;--mut:#aaa;--card:#222226;--line:#38383e;--acc:#ff7a45;--g:#4cc17f;--a:#f0b840;--r:#ff6b6b;--n:#999}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.5 Georgia,"Times New Roman",serif}
+main{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:1.9rem;line-height:1.15;margin:.3em 0}
+h2{font-size:1.3rem;margin:0 0 .4em}
+.mut{color:var(--mut);font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+button{font:inherit;cursor:pointer}
+.opt{display:block;width:100%;text-align:left;background:var(--card);color:var(--fg);border:2px solid var(--line);border-radius:12px;padding:12px 14px;margin:9px 0}
+.opt:hover{border-color:var(--acc)}
+.go{background:var(--acc);color:#fff;border:0;border-radius:12px;padding:12px 22px;font-weight:bold}
+.back{background:none;border:0;color:var(--mut);padding:8px 0}
+.bar{height:6px;background:var(--line);border-radius:4px;margin:8px 0 18px}
+.bar i{display:block;height:100%;background:var(--acc);border-radius:4px}
+.tag{display:inline-block;font:bold .72rem system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;border-radius:6px;padding:2px 8px;color:#fff}
+.meter{display:flex;align-items:center;gap:10px;margin:8px 0}
+.dot{width:16px;height:16px;border-radius:50%;flex:none}
+.note{border-left:4px solid var(--a);padding:6px 12px;margin:12px 0;font-size:.92rem}
+.dial{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,var(--r),var(--a),var(--g));margin:26px 0 6px}
+.dial b{position:absolute;top:-6px;width:4px;height:26px;background:var(--fg);border-radius:2px}
+.dial span{position:absolute;top:-22px;font:.7rem system-ui,sans-serif;transform:translateX(-50%);white-space:nowrap}
+.dlab{display:flex;justify-content:space-between;font-size:.8rem;color:var(--mut)}
+ul{padding-left:20px}li{margin:6px 0}
+details{margin:8px 0}summary{cursor:pointer;font-weight:bold}
+.opt{cursor:pointer}[contenteditable]{outline:1px dashed var(--acc);outline-offset:2px;border-radius:3px}[contenteditable]:focus{outline:2px solid var(--acc);background:rgba(217,83,30,.1)}main{padding-bottom:90px}#edbar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--card);border-top:1px solid var(--line);font:14px system-ui,sans-serif}#edbar:empty{display:none}#edbar button{border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:8px;padding:8px 12px}#edbar button.go{background:var(--acc);color:#fff;border:0}#edbar button:disabled{opacity:.4}
+</style>
+</head>
+<body>
+<main id="app"></main><div id="edbar"></div><script id="txt" type="application/json">{"And your partner?":"How often does your partner work from home?","This quiz is a fun approximation, not a validated test. Your partner’s type is your guess.":"This quiz is a fun approximation, not a validated test. Both your profile and your partner's are estimated from your responses to the situational questions.","The big idea: the dial":"The big idea: ","You’re comfortable with work and home mixing. A quick email on the couch doesn’t bother you.":"You’re mostly comfortable with work and home mixing. You find it easy to talk about work or fulfill a work demand, even if you're at home with your family/partner. It doesn't bother you to switch between those roles frequently.","You described a":"You described them as a","This is your perception, so the pattern is only as accurate as your read. Have your partner take the quiz and compare.":"This is your perception, so the pattern is only as accurate as your read. Have your partner take the quiz and compare your results!","Surprise: mismatched couples did \u003cb>not\u003c/b> report more work-to-home conflict on average. Different preferences aren’t automatically a problem. It depends on the dial (work-from-home hours) and, in this study, on gender.":"Surprise: mismatched couples did \u003cb>not\u003c/b> report more work-to-home conflict on average. Different preferences aren’t automatically a problem. It depends on if one person works from home 40+ hours and on gender.","You: hybrid hours weren’t tested (the study compared ~0 vs. ~40 hrs). Think of it as somewhere between.":"You: hybrid hours weren’t tested in the study. We hypothesize that the impact of having mismatched boundary preferences falls somewhere in-between the impacts seen for 0 work hours at home vs 40+ work hours at home.","Your partner: hybrid hours weren’t tested (the study compared ~0 vs. ~40 hrs). Think of it as somewhere between.":"Your partner: hybrid hours weren’t tested in the study. We hypothesize that the impact of having mismatched boundary preferences falls somewhere in-between the impacts seen for 0 work hours at home vs 40+ work hours at home.","You’re mid-movie and a work email pings. You…":"You’re 10 minutes into watching a movie with your partner when a work email pings. You…","Check it and maybe reply. It’s just an email.":"Check it and reply immediately","Peek, reply if it’s quick.":"Read it, reply if it’s quick/urgent.","Wait until the movie’s over.":"Wait until the movie’s over to look at it.","Phone stays across the room.":"Only read work emails during work hours.","Probably not":"Unsure","Try to save it for later.":"Save it for after dinner.","Dinner is a work-free zone.":"Rarely talk about work at home.","Vent. That’s what partners are for.":"Talk about it all throughout dinner.","Mention it briefly.":"Mention it briefly in conversation.","It’s 9 pm and a work message arrives. You…":"It’s 8 pm and you get a call about work problem. You…","Answer it. Easier to clear now.":"Answer the call and try to figure it out right now.","Read it, answer if urgent.":"Answer the call but only respond if its for something urgent.","Leave it till morning, mostly.":"Send a text/email that you will get back to them in the morning.","A work call runs into family time. How does that feel?":"An online work meeting runs into your family time. How does that feel?","It bugs me a lot.":"I hate it.","A little off, but fine.":"It doesn't happen much so it's fine.","Check it and maybe reply.":"Check it and reply immediately.","Peek, reply if quick.":"Read it, reply if it's quick/urgent.","Wait until later.":"Wait until the movie is over to look at it.","Ignore it completely.":"Ignore it completely until the next time they work.","Not sure":"I'm not sure","Mentions it a little.":"Mentions it sometimes.","Insists on keeping it out.":"Insists on only talking about work while at work.","Answer a few quick questions. You’ll get your type, a look at how you and a partner might fit together, and what one 2026 study found about work-to-home conflict. The questions adapt to your situation, whether you’re single, dating, or living together.":"Answer a few quick questions. You’ll get your boundary preference type, a look at how you and a partner might fit together, and what one 2026 study found about work-to-home conflict. The questions adapt to your situation, whether you’re single, dating, or living together.","Fun, not a diagnosis. About 3 minutes.":"This quiz is not a diagnosis and does not claim to know your true situation. It is purely for fun and estimation purposes.","The gender-specific findings came from heterosexual couples, so we can’t say how they apply to your situation.":"The gender-specific findings came from heterosexual couples, so we can’t say exactly how they might apply to your situation.","Across patterns, boundary preferences mattered most when someone worked from home about full-time. With people mostly at the office, couples seemed to smooth over differences. And because you share one home, your preference is only half the story: how it plays out depends on your partner’s too.":"Boundary preferences mattered most when someone worked from home full-time. When this was the case, if both partners were Blenders they saw minimal work-family conflict. If both partners were Seperators or if the couple was mis-matched, work-family conflict was a more probable outcome. When both partners mostly worked at the office rather than at home, couples seemed to smooth over differences easier and had little conflict. Remember: when you share one home, your preference is only half the story: how it plays out depends on your partner’s preferences too.","A few nights a week":"Sometimes","Rarely":"Rarely/Never","About full-time (35–40+ hrs)":"Full-time (35–40+ hrs)","You don’t live together, and the study’s idea is about a shared home. This is a preview of what could matter if you move in.":"You don’t live together, and the study’s idea is about a shared home. This is a preview of what could matter if you move in and live together one day.","You like a firm wall between work and home. Blurring feels like an intrusion.":"You like a firm wall between work and home. Blurring the lines between them feels like an intrusion. You don't like to engage with work tasks outside of work hours, and you may not like talking about work at home. You prefer that the two worlds stay seperate.","You weren’t sure about your partner’s style, which is common. Below we show what each possibility could mean. A good first step is to ask them.":"You weren’t sure about your partner’s style. Below we show what each possibility could mean. A good first step is to ask them, or have them take this quiz as well!","The study’s highest-risk combination. When someone works from home ~40 hrs/week, two Separators reported \u003cb>more work-to-home conflict\u003c/b> than two Blenders. The authors’ explanation (not measured): strict walls in a home that’s also the office, and reluctance to adapt the space, leave the remote worker in a frustrating setup.":"The study’s highest-risk combination. When someone works from home ~40 hrs/week, two Separators reported \u003cb>more work-to-home conflict\u003c/b> than any other combination. The authors’ explanation (not measured): strict walls in a home that’s also the office, and reluctance to adapt the space, leave the remote worker in a frustrating setup.","Yes":"Yes ","No, I’m single":"No, I’m single "}</script>
+<script>
+var app=document.getElementById("app");
+var HR=[["None (0 hrs)","none"],["Some, a hybrid mix","some"],["About full-time (35–40+ hrs)","full"]];
+var GN=[["Man","man"],["Woman","woman"],["Another identity / prefer not to say","other"]];
+function PO(a,b,c,d){return [[a,1],[b,2],[c,4],[d,5],["Not sure",0]]}
+var Q={
+rel:{t:function(){return "Are you currently in a romantic relationship?"},o:[["Yes","y"],["No, I’m single","n"]]},
+live:{t:function(){return "Do you live with your partner?"},o:[["Yes","y"],["No, we live apart","n"]]},
+work:{t:function(){return "Are you both employed (full-time, part-time, or self-employed)?"},o:[["Both of us","both"],["Only me","me"],["Only my partner","partner"],["Neither of us right now","neither"]]},
+stay:{t:function(){return "How often do you stay at each other’s place?"},o:[["Most nights","most"],["A few nights a week","some"],["Rarely","rare"]]},
+move:{t:function(){return "Do you expect to move in together?"},o:[["Yes, soon","soon"],["Maybe someday","maybe"],["Probably not","no"]]},
+gYou:{t:function(){return "How do you describe your gender?"},o:GN},
+gP:{t:function(){return "And your partner’s?"},o:GN},
+hYou:{t:function(m){return m==="solo"||m==="hyp"?"About how many hours a week do you work, or expect to work, from home?":"In a typical week, how many hours do YOU work from home?"},o:HR},
+hP:{t:function(m){return m==="hyp"?"And your partner: how many hours a week do they work, or expect to work, from home?":"And your partner?"},o:HR},
+p1:{s:1,t:function(){return "You’re mid-movie and a work email pings. You…"},o:[["Check it and maybe reply. It’s just an email.",1],["Peek, reply if it’s quick.",2],["Wait until the movie’s over.",4],["Phone stays across the room.",5]]},
+p2:{s:1,t:function(){return "Work drama is on your mind at dinner. You…"},o:[["Vent. That’s what partners are for.",1],["Mention it briefly.",2],["Try to save it for later.",4],["Dinner is a work-free zone.",5]]},
+p3:{s:1,t:function(){return "It’s 9 pm and a work message arrives. You…"},o:[["Answer it. Easier to clear now.",1],["Read it, answer if urgent.",2],["Leave it till morning, mostly.",4],["Notifications are off. Full stop.",5]]},
+p4:{s:1,t:function(){return "A work call runs into family time. How does that feel?"},o:[["No big deal. Life overlaps.",1],["A little off, but fine.",2],["Pretty annoying.",4],["It bugs me a lot.",5]]},
+q1:{s:2,t:function(){return "Your partner is mid-movie and a work email pings. They…"},o:PO("Check it and maybe reply.","Peek, reply if quick.","Wait until later.","Ignore it completely.")},
+q2:{s:2,t:function(){return "When work stress comes up, your partner…"},o:PO("Talks about it freely.","Mentions it a little.","Tries to keep it out of the house.","Insists on keeping it out.")}
+};
+var rpg=1;function rpage(n){rpg=n;result()}
+var TXT={},EDIT=false,OWNER=false,dirty=false,view=null;
+try{TXT=JSON.parse(document.getElementById("txt").textContent)}catch(e){}
+function ea(x){return x.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function E(x){return '<span class="ed" data-o="'+ea(x)+'"'+(EDIT?' contenteditable="true"':'')+'>'+(TXT[x]!==undefined?TXT[x]:x)+'</span>'}
+function rb(){var b=document.getElementById("edbar");if(!OWNER){b.innerHTML="";return}
+b.innerHTML='<button onclick="toggleEdit()">Edit mode: '+(EDIT?"ON":"OFF")+'</button>'+((EDIT||dirty)?'<button class="go" onclick="save()"'+(dirty?'':' disabled')+'>Save changes</button>':'')+'<span id="edmsg" class="mut">'+(EDIT?"Click any text to edit it. Click the padding around an answer to select it.":"")+'</span>'}
+function toggleEdit(){EDIT=!EDIT;rb();view&&view()}
+function msg(t){var m=document.getElementById("edmsg");if(m)m.textContent=t}
+app.addEventListener("input",function(e){var n=e.target.closest&&e.target.closest(".ed");if(!n)return;var o=n.getAttribute("data-o"),v=n.innerHTML.replace(/&nbsp;/g," ").replace(/<br\s*\/?>$/,"");if(v===""||v===o)delete TXT[o];else TXT[o]=v;dirty=true;rb()});
+app.addEventListener("keydown",function(e){if(e.key==="Enter"&&e.target.closest&&e.target.closest(".ed"))e.preventDefault()});
+async function save(){msg("Saving…");try{var art=await claude.use("artifact");if(!art){msg("Saving isn’t available in this view.");return}
+try{sessionStorage.setItem("wq",JSON.stringify({A:A,hist:hist,edit:EDIT,pg:rpg}))}catch(e){}
+var c=document.documentElement.cloneNode(true);c.querySelector("#txt").textContent=JSON.stringify(TXT).replace(/</g,"\\u003c");c.querySelector("#app").innerHTML="";c.querySelector("#edbar").innerHTML="";
+await art.publish("<!DOCTYPE html>\n"+c.outerHTML);dirty=false;rb()}catch(err){msg("Couldn’t save ("+(err&&err.code||"error")+"). Your edits are still on screen.")}}
+var P1=["p1","p2","p3","p4"],P2=["q1","q2"],A={},hist=[];
+function mode(){if(A.rel==="n")return "solo";if(A.live==="n")return "lat";return {both:"core",me:"one",partner:"one",neither:"hyp"}[A.work]||"core"}
+function seq(){var s=["rel"];if(A.rel==="n")return s.concat(["gYou","hYou"],P1);
+s.push("live");if(A.live==="n")return s.concat(["stay","move","gYou","gP","hYou","hP"],P1,P2);
+if(A.live!=="y")return s;s.push("work");if(!A.work)return s;
+var h=A.work==="me"?["hYou"]:A.work==="partner"?["hP"]:["hYou","hP"];return s.concat(["gYou","gP"],h,P1,P2)}
+function avg(k){var v=[];for(var id in Q){if(Q[id].s===k&&A[id]>0&&seq().indexOf(id)>-1)v.push(A[id])}return v.length?v.reduce(function(a,b){return a+b},0)/v.length:0}
+function typeOf(x){return x===0?"U":x>=3.6?"S":x<=2.4?"B":"M"}
+var TN={S:"Separator",B:"Blender",M:"Somewhere in the Middle",U:"Unknown"};
+function start(){A={};hist=[];rpg=1;view=start;app.innerHTML='<p class="mut">'+E("A quiz inspired by new research")+'</p><h1>'+E("Separator or Blender?")+'<br>'+E("What working from home might mean for your relationship")+'</h1><p>'+E("Answer a few quick questions. You’ll get your type, a look at how you and a partner might fit together, and what one 2026 study found about work-to-home conflict. The questions adapt to your situation, whether you’re single, dating, or living together.")+'</p><p class="mut">'+E("Fun, not a diagnosis. About 3 minutes.")+'</p><button class="go" onclick="next()">Start</button>'}
+function next(){view=next;var s=seq(),id=s.filter(function(x){return A[x]===undefined})[0];if(!id){result();return}
+var q=Q[id],m=mode(),h='<div class="bar"><i style="width:'+Math.round(hist.length/s.length*100)+'%"></i></div>'+(q.s===2?'<p class="mut">'+E("About your partner (your best guess)")+'</p>':'')+'<h2>'+E(q.t(m))+'</h2>';
+q.o.forEach(function(o,k){h+='<div class="opt" role="button" onclick="pick(event,\''+id+'\','+k+')">'+E(o[0])+'</div>'});
+if(hist.length)h+='<button class="back" onclick="back()">← Back</button>';app.innerHTML=h;window.scrollTo(0,0)}
+function pick(ev,id,k){if(EDIT&&ev.target.closest(".ed"))return;A[id]=Q[id].o[k][1];hist.push(id);next()}
+function back(){var id=hist.pop();delete A[id];next()}
+function meter(c,t){var col={g:"var(--g)",a:"var(--a)",r:"var(--r)",n:"var(--n)"}[c];return '<div class="meter"><span class="dot" style="background:'+col+'"></span><b>'+t+'</b></div>'}
+var ML={g:"Lower conflict expected",a:"Unclear, possibly elevated",r:"Higher conflict risk",n:"It depends"};
+function person(g,h,who){if(g==="other"||h==="na"||!g)return null;
+if(h==="full")return g==="man"?{c:"r",t:E(who+" (man, working from home ~full-time): with a mismatched partner, men in the study reported more work-to-home conflict. This was less robust when the authors dropped their control variables.")}:{c:"g",t:E(who+" (woman, working from home ~full-time): with a mismatched partner, women reported less conflict. The authors expected the opposite. Their idea (she may borrow strategies from a differently-minded partner) is speculation.")};
+if(h==="none")return g==="man"?{c:"g",t:E(who+" (man, working mostly outside the home): men reported lower conflict with a mismatched partner. The authors call this surprising and tentative.")}:{c:"n",t:E(who+" (woman, working mostly outside the home): no clear change in the study.")};
+return {c:"n",t:E(who+": hybrid hours weren’t tested (the study compared ~0 vs. ~40 hrs). Think of it as somewhere between.")}}
+function pt(pat,yf,pf,sm){
+if(pat==="twoS"){if(yf)return["r",E("The study’s highest-risk combination. When someone works from home ~40 hrs/week, two Separators reported <b>more work-to-home conflict</b> than two Blenders. The authors’ explanation (not measured): strict walls in a home that’s also the office, and reluctance to adapt the space, leave the remote worker in a frustrating setup.")];
+if(pf)return["a",E("The study measured each person’s own hours, so a partner’s remote work wasn’t directly tested. By the authors’ reasoning (a co-created home), two Separators sharing a home-office could feel strain. A hunch, not a finding.")];
+if(sm)return["a",E("Hybrid wasn’t tested. The pattern was strongest at ~40 hrs and not meaningful at ~0 hrs, so you’re likely in between. Watch it if hours rise.")];
+return["g",E("With little or no work from home, the study found no meaningful difference between couple types. The risk shows up when the dial turns up.")]}
+if(pat==="twoB"){if(yf)return["g",E("The study’s lowest-conflict pairing. At ~40 hrs/week at home, two Blenders reported the <b>least work-to-home conflict</b>. The authors’ reasoning: they tolerate overlap, build flexible routines (shared calendars, joint breaks), and may welcome interruptions as a break.")];
+if(pf)return["g",E("A partner’s hours weren’t directly tested, but the authors’ reasoning suggests overlap-friendly couples adapt well. A hunch.")];
+if(sm)return["g",E("Hybrid wasn’t tested. Nothing suggests trouble, and the Blender advantage was strongest at high hours.")];
+return["g",E("With little work from home, couple type made no meaningful difference in the study.")]}
+if(pat==="mix")return["n",E("Surprise: mismatched couples did <b>not</b> report more work-to-home conflict on average. Different preferences aren’t automatically a problem. It depends on the dial (work-from-home hours) and, in this study, on gender.")];
+return["n",E("The study measured preferences on a 1–5 scale but only reported patterns for two Separators, two Blenders, and mismatches. In-betweens weren’t tested. Our inference: you’re probably closer to whichever end you lean toward.")]}
+function patOf(y,p){return(y==="M"||p==="M")?"mid":(y===p?(y==="S"?"twoS":"twoB"):"mix")}
+function result(){view=result;
+var m=mode(),y=typeOf(avg(1)),p=typeOf(avg(2)),ys=avg(1),ps=avg(2);
+var hy=A.hYou||"na",hp=A.hP||"na";if(m==="one"){if(A.work==="me")hp="na";else hy="na"}if(m==="solo")hp="na";
+var yf=hy==="full",pf=hp==="full",sm=hy==="some"||hp==="some";
+var het=m!=="solo"&&((A.gYou==="man"&&A.gP==="woman")||(A.gYou==="woman"&&A.gP==="man"));
+var hypo=m!=="core",known=m!=="solo"&&p!=="U";
+var h='<p class="mut">Your results'+(hypo?' · <span class="tag" style="background:var(--acc)">Hypothetical</span>':'')+'</p><h1>You’re '+(y==="M"?"somewhere in the middle":"a "+TN[y])+'.</h1>';
+var dp=function(x){return 4+(5-x)/4*92},sh=known&&Math.abs(ys-ps)<0.4?1.5:0;h+='<div class="dial"'+(known?' style="margin-bottom:34px"':'')+'><b style="left:'+(dp(ys)-sh)+'%"><span>You</span></b>'+(known?'<b style="left:'+(dp(ps)+sh)+'%;background:var(--acc)"><span style="color:var(--acc);top:28px">Partner</span></b>':'')+'</div><div class="dlab"><span>Separator</span><span>Blender</span></div>';
+var N={solo:E("You’re not in a relationship right now, so there’s no couple pattern yet. Below is what each kind of pairing might mean for you someday. It’s a what-if, not a finding about you."),
+lat:E("You don’t live together, and the study’s idea is about a shared home. This is a preview of what could matter if you move in.")+(A.stay==="most"||A.move==="soon"?E(" You already share space often, so some of it may apply now (our inference)."):A.move==="no"?E(" If you never share a home, this may matter much less."):""),
+one:E("Only one of you is employed, and the study looked at dual-earner couples. Treat this as ideas to consider, not findings about couples like you."),
+hyp:E("Neither of you is working right now, so this is a what-if for when work (or work from home) enters the picture.")}[m];
+if(N)h+='<div class="note">'+N+'</div>';
+h+='<div class="card"><h2>'+E("You")+'</h2><p>'+E(({S:"You like a firm wall between work and home. Blurring feels like an intrusion.",B:"You’re comfortable with work and home mixing. A quick email on the couch doesn’t bother you.",M:"You flex depending on the day, leaning "+(ys>=3?"toward Separator":"toward Blender")+"."})[y])+'</p></div>';
+if(m!=="solo")h+='<div class="card"><h2>'+E("Your partner (as you see them)")+'</h2><p>'+(p==="U"?E("You weren’t sure about your partner’s style, which is common. Below we show what each possibility could mean. A good first step is to ask them."):E("You described a")+' <b>'+TN[p].toLowerCase()+'</b>. '+E(({S:"That means they like a firm wall between work and home.",B:"That means they’re comfortable with work and home mixing.",M:"That means they flex depending on the day, leaning "+(ps>=3?"toward Separator":"toward Blender")+"."})[p])+' <span class="mut">'+E("This is your perception, so the pattern is only as accurate as your read. Have your partner take the quiz and compare.")+'</span>')+'</p></div>';
+var g1=h;h='';
+function block(label,pat,ge){var r=pt(pat,yf,pf,sm),o='<div class="card"><h2>'+E(label)+'</h2>'+meter(r[0],ML[r[0]])+'<p>'+r[1]+'</p>';
+if(pat==="mix"){if(ge){var a=person(A.gYou,hy,"You"),b=person(A.gP,hp,"Your partner");[a,b].forEach(function(x){if(x)o+=meter(x.c,"")+'<p>'+x.t+'</p>'});if(a||b)o+='<p class="mut">'+E("Same pattern whichever of you is the Separator.")+'</p>'}
+else o+='<div class="note">'+E("The gender-specific findings came from heterosexual couples, so we can’t say how they apply to your situation.")+'</div>'}return o+'</div>'}
+h+='<p class="mut">'+E("Quick definition: work-to-home conflict means work stress or demands spilling over into home life.")+'</p>';if(known)h+=block("Your couple pattern: "+{twoS:"Two Separators",twoB:"Two Blenders",mix:"One Separator, One Blender",mid:"A pairing with a ‘middle’"}[patOf(y,p)],patOf(y,p),het);
+else if(y==="M")h+=block("If you partner with someone",patOf("M","S"),false);
+else{[["S","a Separator"],["B","a Blender"]].forEach(function(t){h+=block("If your partner is "+t[1],patOf(y,t[0]),false)});}
+if(!known&&m==="solo"&&(A.gYou==="man"||A.gYou==="woman")&&y!=="M")h+='<p class="mut">'+E("In the study’s heterosexual couples, the mismatch result differed for men and women (see the research notes). That would apply if you’re a")+' '+A.gYou+' with a '+(A.gYou==="man"?"woman":"man")+'.</p>';
+if(yf&&pf)h+='<div class="note">'+E("Both of you working from home full-time wasn’t separately tested. Our inference: two people claiming the same space may need clear rules for who gets which room and when.")+'</div>';
+h+='<div class="card"><h2>'+E("The big idea: the dial")+'</h2><p>'+E("Across patterns, boundary preferences mattered most when someone worked from home about full-time. With people mostly at the office, couples seemed to smooth over differences. And because you share one home, your preference is only half the story: how it plays out depends on your partner’s too.")+'</p></div>';
+var g2=h;h='';var first={solo:E("If you start dating or move in with someone, talk about boundaries early, before work-from-home hours go up."),lat:E("Before you move in, talk about where work will happen and what ‘off the clock’ looks like."),one:E("Talk through how the working partner’s schedule shapes the shared space."),hyp:E("If work-from-home enters the picture, talk about boundaries before the hours go up."),core:E("Talk about boundaries <i>before</i> work-from-home hours go up.")}[m];
+h+='<div class="card"><h2>'+E("Things to consider")+' <span class="mut">'+E("(our inference, not the paper’s)")+'</span></h2><ul><li>'+first+'</li><li>'+E("Agreeing isn’t a guarantee of smooth sailing. Two Separators may need to design boundaries on purpose, in space (a door, a desk) and in time (clear start and stop).")+'</li><li>'+E("Don’t assume a mismatch is bad. On average it wasn’t.")+'</li><li>'+E(m==="solo"?"Notice your own type. It’s a useful thing to know about yourself.":"Ask your partner to take the quiz and compare.")+'</li></ul></div>';
+h+='<details class="card"><summary>'+E("The fine print")+'</summary><ul>'+["Based on Hermida Carrillo, Bölingen, Matthews &amp; Weller (2026), <i>Journal of Organizational Behavior</i>.", "Main study: 170 couples in Munich in 2020 during COVID, when working from home wasn’t fully voluntary. All were cohabiting, heterosexual, dual-earner couples. Singles, couples living apart, and one-earner couples weren’t studied.", "The data are correlational and don’t prove working from home causes anything.", "“Separator” and “Blender” are our labels. The study used a 1–5 scale.", "This quiz is a fun approximation, not a validated test. Your partner’s type is your guess."].map(function(x){return '<li>'+E(x)+'</li>'}).join('')+'</ul></details>';
+var nv=function(n,x){return '<div style="display:flex;gap:12px;align-items:center;margin-top:18px"><span class="mut">'+n+' of 3</span>'+x+'</div>'};
+var gs=[0,g1+nv(1,'<button class="go" onclick="rpage(2)">Next: your couple pattern →</button>'),g2+nv(2,'<button class="back" onclick="rpage(1)">← Back</button><button class="go" onclick="rpage(3)">Next: things to consider →</button>'),h+nv(3,'<button class="back" onclick="rpage(2)">← Back</button><button class="go" onclick="start()">Retake</button>')];
+app.innerHTML=gs[rpg];window.scrollTo(0,0)}
+var S=null;try{S=JSON.parse(sessionStorage.getItem("wq"));sessionStorage.removeItem("wq")}catch(e){}
+if(S&&S.A){A=S.A;hist=S.hist||[];rpg=S.pg||1;next()}else start();
+(async function(){try{if(!window.claude)return;var u=await claude.use("user");if(!u||!(await u.isOwner()))return}catch(e){return}
+OWNER=true;if(S&&S.edit)EDIT=true;rb();if(EDIT&&view)view()})();
+</script>
+
+
+</body></html>
